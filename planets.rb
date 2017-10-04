@@ -13,4 +13,19 @@ rocky_planets = planet_list.slice(4..7)
 # puts rocky_planets
 
 planet_list.pop
-puts planet_list
+# puts planet_list
+
+satalite_array = []
+satalite_array.push(["Sputnick1", "Mars", "Pluto"])
+satalite_array.push(["Sputnick2", "Moon", "PlanetWhat?"])
+satalite_array.push(["Voyager", "Earth", "Uranus"])
+satalite_array.push(["Orion", "Venus", "Saturn"])
+# puts satalite_array
+
+for planet in planet_list
+    for satalite in satalite_array
+        if satalite.include?(planet)
+            puts "#{satalite[0]} has visited #{planet}"
+        end
+    end
+end
